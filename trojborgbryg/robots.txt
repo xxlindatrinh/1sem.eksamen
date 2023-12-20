@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /private/
+Disallow: /secret-page.html
+Allow: /public/
+
+Sitemap: http://trojborgbryg.designbylinda.dk/sitemap.xml
