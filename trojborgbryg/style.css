@@ -1,0 +1,956 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F2C9E0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+}
+
+/* font, overskrifter og brødtekst styles */
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #011126;
+  font-weight: 600;
+  padding-left: 10px;
+  padding-left: 10px;
+  margin:0;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  font-family: 'Quicksand', sans-serif;
+  color: #011126;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.visual-gap {
+  height: 10px;
+  background-color: transparent;
+}
+
+/* Navbar styling */
+.navbar {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  margin: 10px;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+  padding-right: 38px;
+}
+
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: #011126;
+}
+
+.nav-links:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+#js-menu {
+  margin-left: 0;
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+/* effekt på logo */
+.logo figure::before {
+  display: none;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+/* Footer styling */
+footer {
+  background-color: #1E4DD9;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+footer h2,
+address {
+  color: #ffffff;
+}
+
+.social {
+  margin-bottom: 20px;
+}
+
+.social a {
+  font-size: 24px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 60%;
+  margin: 0 8px;
+  opacity: 1;
+  transition: color 0.3s, opacity 0.3s;
+}
+
+.social a:hover {
+  color: #f24444;
+  opacity: 1;
+}
+
+.footer ul {
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.footer ul li:last-child {
+  margin-right: 0;
+}
+
+.footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 1;
+  transition: color 0.3s, opacity 0.3s;
+}
+
+.footer ul li a:hover {
+  opacity: 1;
+  color: #f24444;
+}
+
+address {
+  text-decoration: none;
+}
+
+/* Responsiv iframe */
+iframe {
+  max-width: 350px;
+}
+
+/* Styling af "Læs mere" knap */
+.cta-button {
+  background-color: #1E4DD9;
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 14px;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.cta-button-design {
+  background-color: #F2C9E0;
+  color: #000000;
+  padding: 5px 10px;
+  font-size: 14px;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+a.cta-button{
+  color: #ffffff;
+}
+a.cta-button-design {
+  color:#000000;
+}
+
+.cta-button:hover,
+.cta-button-design:hover{
+  background-color: #f24444;
+}
+
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* Styling af grid layout */
+#grid {
+  row-gap: 40px;
+  overflow: hidden;
+}
+
+header {
+  grid-column: 1/13;
+  grid-row: 1/2;
+  align-items: end;
+}
+
+#main img {
+  margin: 0;
+}
+
+#drikansvarligt,
+#produkter {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.nestedgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+#drikansvarligt img,
+#produkter img,
+#historie img,
+#butik img,
+#bar img,
+.nested-historie img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.nested-historie img {
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Specifikke styles for produkter.html */
+header,
+main,
+.navn,
+.produkt,
+.indhold,
+footer {
+  grid-column: 1/1;
+}
+
+.navn,
+.produkt,
+.indhold {
+  margin: 0 auto;
+  grid-row: auto;
+}
+
+.navn h2 {
+  font-size: 20px;
+}
+
+.navn h3 {
+  background-color: #ffffff;
+  border: #f24444 solid 2px;
+  border-radius: 10px;
+  margin-left: 120px;
+  margin-right: 120px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-back-button {
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+  position: absolute;
+  top: 200px;
+  left: 10px;
+}
+
+.custom-back-button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.custom-back-button:hover {
+  background-color: #f24444;
+}
+
+.produkt-container {
+  background-color: #fff;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.produkter {
+  justify-self: center;
+}
+
+/* Flashing effect */
+.produkt figure:hover img {
+  opacity: 1;
+  animation: flash 1.5s;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* mindful.html specifikke styles */
+#mindful img {
+  width: 300px; /* Set your desired width */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+#mindful-container{
+  margin-bottom: 20px;
+}
+
+/* community.html specifikke styles */
+.container-community {
+  background-color: #1E4DD9; /* Set the background color to white */
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  border-radius: 10px; /* Add border-radius for rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+}
+
+.container-community p,
+.container-community h1
+{
+  color: #ffffff;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#anbefalinger img{
+  margin:0 auto;
+}
+
+.find-designer p{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#reklame-container {
+  margin-bottom: 20px;
+}
+
+#reklame-container img {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  margin: 0;
+  padding-bottom: 20px;
+  border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+}
+
+.container-designoel {
+  align-self: center;
+  background-color: #1E4DD9; /* Set the background color to white */
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px; /* Add border-radius for rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow for depth */
+}
+
+.container-designoel img{
+  margin-top: 10px;
+  margin: 0%;
+  border-radius: 10px;
+}
+
+.designeroel{
+  margin: 5px;
+}
+#designeroel{
+  padding-bottom: 5px;;
+}
+
+.container-designoel p,
+.container-designoel h1
+{
+  color: #ffffff;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* specifikke øl produkt styles */
+#container-produkt h2 {
+  padding:0;
+}
+#food-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Adjust as needed for your layout */
+  gap: 20px;
+}
+.jul{
+  background: url(img/baggrundjul1512.png);
+  margin-top: 40px;
+  border-radius: 10px;
+}
+.solmoden-mango{
+  background: url(img/baggrundmango1512px.png);
+  border-radius:10px;
+}
+.jordbaer{
+  background: url(img/baggrundjordbær1512px.png);
+  border-radius:10px;
+}
+.citron{
+  background: url(img/baggrundcitron1512px.png);
+  border-radius:10px;
+}
+
+.jul img,
+.jordbaer img,
+.citron img,
+.solmoden-mango img{
+  max-width: 100%;
+  max-height: 200px; /* This ensures the image maintains its aspect ratio */
+  margin-top:10px;
+  margin-bottom: 5px;
+}
+
+.find-designer{
+  background-color: #F2C9E0;
+  box-sizing: border-box;
+  padding: 20px;
+  border: 5px solid #1E4DD9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Add a subtle box shadow for depth */
+}
+
+.find-designer h1{
+  color: #f24444;
+}
+
+/* smagsoplevelser.html specifikke styles */
+#container-smagsoplevelser p {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+#container-smagsoplevelser img,
+#smagsoplevelser{
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  margin: 0;
+  padding: 10px;
+  border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+}
+
+.oel-parringer img{
+  max-width: 100%;
+  max-height: 600px; /* This ensures the image maintains its aspect ratio */
+  margin-top:10px;
+}
+.oel-parringer{
+  padding-top: 40px;
+}
+
+#ferie,
+#hygge,
+#fest{
+  padding: 10px;
+}
+
+#ferie img,
+#hygge img,
+#fest img{
+  box-sizing: border-box;
+  width: 100%;
+  height:auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow for depth */
+}
+
+/* historie.html specifikke styles */
+#grid-historie{
+  padding: 50px;
+  margin-right: 15px;
+}
+#budskab{
+padding: 10px;
+}
+#identitet{
+  margin-top: 30px;
+}
+.identitet p {
+  padding-left: 15px; /* Adjust the padding value as needed */
+  padding-right: 15px;
+}
+
+/* styling af billeder så de passer i grid box */
+main img {
+  max-width: 100%;
+  height: auto; /* This ensures the image maintains its aspect ratio */
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.produkt img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+#lokation img {
+  max-width: 100%; /* Set a maximum width */
+  max-height: 200px; /* Set a maximum height */
+  width: auto; /* Ensure the width adjusts based on the max-width property */
+  height: auto; /* Ensure the height adjusts based on the max-height property */
+  margin-right: 5px;
+  object-fit: cover;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.solmoden-mango img,
+.jul img,
+.jordbaer img,
+.citron img{
+    max-width: 100%;
+    max-height: 200px; /* This ensures the image maintains its aspect ratio */
+    margin-top:10px;
+    margin-bottom: 5px;
+}
+
+/* Responsive design */
+@media screen and (min-width: 768px) {
+
+  /* Font styles */
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #011126;
+    font-size: 45px;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #011126;
+    font-size: 35px;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #011126;
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  /* Style for paragraphs (p) */
+  p {
+    font-family: 'Quicksand', sans-serif;
+    color: #011126;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+  }
+
+  /* Style navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0;
+  height: 70px;  
+  align-items: center;
+}
+.main-nav {
+  display: flex;
+  margin-right: 10px;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.main-nav li {
+  margin: 0;
+}
+.nav-links {
+  margin-left: 40px;
+}
+.logo {
+  margin-top: 0;
+}
+.navbar-toggle {
+  display: none;
+}
+.logo:hover,
+.nav-links:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Shine på logo*/
+.logo {
+	position: relative;
+}
+.logo figure::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+}
+.logo figure:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+
+  /* Styling af footer */
+  footer {
+    grid-column: 1/13;
+    background-color: #1E4DD9;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  #nestedfooter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    padding: 5px;
+  }
+
+  /* Styling af "læs mere" button */
+  .cta-button
+  .cta-button-design {
+    padding: 10px 20px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+
+  /* Grid layout */
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-column-gap: 30px;
+    max-width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; /* Add this to prevent horizontal scrolling */
+  }
+
+  /* Apply different grid-row-gap to the second row */
+  #grid > div:nth-child(2) {
+    grid-row-gap: 0px; /* Adjust the value as needed */
+  }
+
+  /* Styling af elementer som grid layout */
+  nav {
+    grid-column: 1/13;
+    grid-row: 1/2;
+    align-items: end;
+  }
+
+  header {
+    grid-column: 1/13;
+    grid-row: 1/2;
+    align-items: end;
+  }
+
+  /* index.html specifikke styles */
+  #drikansvarligt {
+    grid-column: 1/7;
+  }
+
+  #produkter {
+    grid-column: 7/13;
+  }
+
+  #historie {
+    grid-column: 1/5;
+  }
+
+  #butik {
+    grid-column: 5/9;
+  }
+
+  #bar {
+    grid-column: 9/13;
+  }
+
+  #main img {
+    width: 1200px; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 0;
+  }
+
+  /* produkter.html specifikke styles */
+  main {
+    grid-column: 1/13;
+  }
+
+  .main-container {
+    margin-left: 250px;
+    margin-right: 250px;
+  }
+
+  .navn {
+    grid-column: 1/5;
+  }
+
+  .produkt {
+    grid-column: 5/9;
+  }
+
+  .indhold {
+    grid-column: 9/13;
+    align-self: end;
+  }
+
+  .navn h2 {
+    font-size: 30px;
+  }
+
+  .produkt img {
+    width: 450px;
+    padding-right: 20px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* Specifikke øl produkt styles */
+  .solmoden-mango img,
+  .jul img, 
+  .jordbaer img,
+  .citron img{
+    max-width: 100%;
+    max-height: 400px; /* This ensures the image maintains its aspect ratio */
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .specifikt-produkt p {
+    padding-left: 500px;
+    padding-right: 500px;
+  }
+
+  /* smagsoplevelser.html specifikke styles */
+  .smagsoplevelser {
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    padding: auto; /* Adjust padding as needed */
+    gap: 10px;
+  }
+
+  #container-smagsoplevelser p {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+  .oel-parringer img {
+    max-width: 100%;
+    max-height: 600px; /* This ensures the image maintains its aspect ratio */
+    margin-top: 10px;
+  }
+
+  .smagsoplevelser img {
+    max-width: 100%;
+    max-height: 480px; /* This ensures the image maintains its aspect ratio */
+    margin-top: 10px;
+  }
+
+  /* mindful.html specifikke styles */
+  #mindful {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Adjust as needed for your layout */
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  #mindful img {
+    width: 710px; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 30px;
+  }
+
+  #mindful p {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  /* community.html specifikke styles */
+  .container-community {
+    margin-left: 250px;
+    margin-right: 250px;
+    padding: 10px;
+  }
+
+  .container-designoel {
+    margin-left: 250px;
+    margin-right: 250px;
+  }
+
+  #anbefalinger {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0;
+  }
+
+  #anbefaling-1,
+  #anbefaling-2,
+  #anbefaling-3 {
+    text-align: center; /* Optional: Center the content within each figure */
+  }
+
+  .find-designer p {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+  #reklame-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Adjust as needed for your layout */
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  #reklame-container img {
+    width: 500px; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0;
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+  }
+
+  /* historie.html specifikke styles */
+  #grid-historie {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-column-gap: 10px;
+    grid-row-gap: 50px;
+    max-width: fit-content;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; /* Add this to prevent horizontal scrolling */
+  }
+
+  #historie-1997 {
+    grid-column: 1/5;
+  }
+
+  #historie-2017 {
+    grid-column: 5/9;
+  }
+
+  #historie-2020 {
+    grid-column: 9/13;
+  }
+
+  #historie-2023 {
+    grid-column: 5/9;
+  }
+
+  .identitet p {
+    padding-left: 400px; /* Adjust the padding value as needed */
+    padding-right: 400px;
+  }
+
+  .nested-historie img {
+    width: 400px; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 0;
+  }
+
+  #mission,
+  #vision,
+  #vaerdier {
+    grid-column: 1/13;
+  }
+
+  .historie{
+    padding-top: 40px;
+  }
+
+}
